@@ -1,0 +1,11 @@
+name: pidPipelineCode_dev
+channels:
+- conda-forge
+- bioconda
+dependencies:
+- r-base >= 4.2.3
+- r-ggplot2
+- r-scales
+- r-ggtext
+- r-dplyr
+- r-devtools

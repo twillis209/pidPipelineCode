@@ -25,7 +25,7 @@ munge_gwas_input <- function(input_data) {
   list("gwas_data" = gwas_data, "axis_set" = axis_set, "ylim" = ylim)
 }
 
-##' @importFrom ggplot2 ggplot geom_hline geom_point scale_x_continuous scale_y_continuous labs theme element_blank element_tex
+##' @importFrom ggplot2 ggplot geom_hline geom_point scale_x_continuous scale_y_continuous labs theme element_blank element_text
 ##' @importFrom ggtext element_markdown
 ##' @export
 ggmanhattan <- function(munged_gwas_input) {

@@ -2,7 +2,8 @@ Package: pidPipelineCode
 Title: Utility functions for the PID cFDR pipeline
 Version: 0.0.0.9000
 Authors@R: 
-    c(person(given = "Thomas",
+    c(
+    person(given = "Thomas",
     family = "Willis",
     email = "tom.willis@live.com",
     role = c("aut", "cre"),
