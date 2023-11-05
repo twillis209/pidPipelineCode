@@ -2,9 +2,14 @@ Package: pidPipelineCode
 Title: Utility functions for the PID cFDR pipeline
 Version: 0.0.0.9000
 Authors@R: 
-    person("Thomas", "Willis", , "tom.willis@live.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"),
-           person("Chris", "Wallace"))
+    c(person(given = "Thomas",
+    family = "Willis",
+    email = "tom.willis@live.com",
+    role = c("aut", "cre"),
+    comment = c(ORCID = "YOUR-ORCID-ID")),
+    person(given = "Chris",
+    family = "Wallace")
+    )
 Description: Utility functions for the PID cFDR pipeline
 License: MIT + file LICENSE
 Encoding: UTF-8
