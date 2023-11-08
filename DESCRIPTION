@@ -9,7 +9,8 @@ Authors@R:
     role = c("aut", "cre"),
     comment = c(ORCID = "YOUR-ORCID-ID")),
     person(given = "Chris",
-    family = "Wallace")
+    family = "Wallace",
+    comment = c(ORCID = "0000-0001-9755-1703"))
     )
 Description: Utility functions for the PID cFDR pipeline
 License: MIT + file LICENSE

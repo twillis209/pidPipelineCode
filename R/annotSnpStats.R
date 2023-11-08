@@ -4,13 +4,14 @@
 ##'
 ##' @param x character vector of genotypes
 ##' @param sep character with which to separate alleles. Default is "/".
+##' @importFrom data.table tstrsplit
 ##' @export
 ##' @return character vector of reversed genotypes 
 ##' @examples
 ##' g.rev(c("A/G","A/T"))
 ##' @author Chris Wallace
 g.rev <- function(x,sep="/") {
-  tmp=strsplit(x,sep)
+  tmp=tstrsplit(x,sep)
   paste(tmp[[2]],tmp[[1]],sep=sep) 
   ## sapply(strsplit(x,sep),function(g) paste(rev(g),collapse="/"))
 }
