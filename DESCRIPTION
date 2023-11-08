@@ -22,4 +22,5 @@ Imports:
     ggplot2,
     scales,
     ggtext,
-    dplyr
+    dplyr,
+    data.table
