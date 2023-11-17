@@ -23,4 +23,5 @@ Imports:
     scales,
     ggtext,
     dplyr,
-    data.table
+    data.table,
+    stats
