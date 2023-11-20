@@ -1,7 +1,7 @@
 ##' From https://danielroelfs.com/blog/how-i-create-manhattan-plots-using-ggplot/
 ##' @importFrom dplyr group_by summarise mutate lag select inner_join filter pull
 ##' @export
-munge_gwas_input <- function(input_data) {
+munge_gwas_input <- function(gwas_dat) {
   data_cum <- gwas_dat %>% 
     group_by(chr) %>% 
     summarise(max_bp = max(bp)) %>% 
