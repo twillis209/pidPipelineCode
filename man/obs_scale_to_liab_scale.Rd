@@ -9,9 +9,9 @@ obs_scale_to_liab_scale(h2.obs, P, K)
 \arguments{
 \item{h2.obs}{estimated h2 on the observed scale}
 
-\item{P}{prevalence of disease}
+\item{P}{case proportion in study}
 
-\item{K}{case proportion in study}
+\item{K}{disease prevalence in population}
 }
 \description{
 Transform heritability (h2) estimates from the observed scale to the liability scale

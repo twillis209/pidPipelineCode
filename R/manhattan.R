@@ -1,5 +1,6 @@
 ##' From https://danielroelfs.com/blog/how-i-create-manhattan-plots-using-ggplot/
 ##' @importFrom dplyr group_by summarise mutate lag select inner_join filter pull
+##' @importFrom data.table data.table
 ##' @export
 munge_gwas_input <- function(gwas_dat) {
   data_cum <- gwas_dat %>% 
@@ -22,7 +23,7 @@ munge_gwas_input <- function(gwas_dat) {
     mutate(ylim = abs(floor(log10(p))) + 2) %>% 
     pull(ylim)
 
-  list("gwas_data" = gwas_data, "axis_set" = axis_set, "ylim" = ylim)
+  list("gwas_data" = gwas_data, "axis_set" = data.table(axis_set), "ylim" = ylim)
 }
 
 ##' @importFrom ggplot2 ggplot geom_hline geom_point scale_x_continuous scale_y_continuous labs theme element_blank element_text

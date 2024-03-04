@@ -4,7 +4,7 @@
 \alias{munge_gwas_input}
 \title{From https://danielroelfs.com/blog/how-i-create-manhattan-plots-using-ggplot/}
 \usage{
-munge_gwas_input(input_data)
+munge_gwas_input(gwas_dat)
 }
 \description{
 From https://danielroelfs.com/blog/how-i-create-manhattan-plots-using-ggplot/
