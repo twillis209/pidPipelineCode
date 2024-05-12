@@ -27,24 +27,15 @@ munge_gwas_input <- function(gwas_dat) {
 }
 
 ##' @importFrom ggplot2 ggplot geom_hline geom_point scale_x_continuous scale_y_continuous labs theme element_blank element_text
+##' @param x_color_palette per-chromosome palette
 ##' @importFrom ggtext element_markdown
 ##' @export
-ggmanhattan <- function(munged_gwas_input) {
-  manhplot <- ggplot(munged_gwas_input$gwas_data, aes(x = bp_cum, y = -log10(p), 
-                                    color = as_factor(chr), size = -log10(p))) +
-    geom_hline(yintercept = -log10(5e-8), color = "grey40", linetype = "dashed") + 
-    geom_hline(yintercept = -log10(1e-5), color = "grey40", linetype = "dashed") + 
+ggmanhattan <- function(munged_gwas_input, x_color_palette, ylim) {
+  manhplot <- ggplot(munged_gwas_input$gwas_data, aes(x = bp_cum, y = -log10(p), color = as_factor(chr))) +
     geom_point(size = 0.3) +
     scale_x_continuous(label = munged_gwas_input$axis_set$chr, breaks = munged_gwas_input$axis_set$center) +
-    scale_y_continuous(expand = c(0,0), limits = c(0, ylim)) +
-    scale_size_continuous(range = c(0.5,3)) +
-    labs(x = NULL, 
-         y = "-log<sub>10</sub>(p)") + 
-    theme( 
-      legend.position = "none",
-      panel.grid.major.x = element_blank(),
-      panel.grid.minor.x = element_blank(),
-      axis.title.y = element_markdown(),
-      axis.text.x = element_text(angle = 60, size = 8, vjust = 0.5)
-    )
+    scale_color_manual(values = x_color_palette) +
+    scale_y_neglog10(limits = c(1, ylim))+
+    labs(x = NULL,
+         y = "-log<sub>10</sub>(p)")
 }
