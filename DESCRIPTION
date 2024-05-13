@@ -1,6 +1,6 @@
 Package: pidPipelineCode
 Title: Utility functions for the PID cFDR pipeline
-Version: 0.0.0.9000
+Version: 1.7
 Authors@R: 
     c(
     person(given = "Thomas",
